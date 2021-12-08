@@ -1,0 +1,14 @@
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/mixins' as *;
+
+.nav__upload-button {
+  background-color: $color-primary-BrainFlix-Blue;
+  width: 100%;
+  display: flex;
+  border: 0px solid black;
+  color: white;
+  margin: 1rem 0rem;
+  padding: 1rem 0rem;
+  align-items: center;
+  padding-left: auto;
+}
