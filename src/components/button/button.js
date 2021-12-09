@@ -1,15 +1,16 @@
 import "./button.scss"
+import UploadSVG from "../../assets/images/Icons/upload.svg"
 
-import Upload from "../../assets/images/Icons/upload.svg"
 
 
-function Button() {
+function Button(props) {
   return (
-    <button className="nav__upload-button">
-      <img className="nav__upload-icon" src={Upload} alt="upload"></img>
-      UPLOAD
-    </button>
-  );
+  <button className="button">
+    
+    <img className="button__icon" src={props.icon}/>
+    <p className="button__text">{props.text}</p>
+  </button>
+  )
 }
 
 export default Button;

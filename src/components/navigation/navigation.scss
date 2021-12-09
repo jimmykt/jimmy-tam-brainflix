@@ -4,9 +4,10 @@
 .nav {
   @include page-side-padding-mobile;
   display: flex;
-  background-color: aqua;
   flex-direction: column;
   align-items: center;
+  position: relative;
+
 
   &__logo {
     margin: 1rem 0rem;
@@ -20,16 +21,23 @@
     width: 100%;
   }
 
-  &__icon-search {
+  &__form {
+    width: 85%;
+  }
+
+  &__search-icon {
     position: absolute;
-    top: 7px;
-    left: 8px;
+    top: 10.5px;
+    padding-left: .5rem;
   }
   &__search-imput {
-    height: 2rem;
-    width: 14.5rem;
+    background-color: $color-seondary-BrainFlix-Alabaster;
+    border: 1px solid $color-primary-BrainFlix-Silver;
+    height: 2.4rem;
     padding-left: 30px;
-    margin-right: 1rem;
+    width: 100%;
+    border-radius: 4px;
+
   }
 
 
@@ -41,18 +49,11 @@
     border-radius: 50%;
     width: 36px;
     height: 36px;
-    right: 0;
+    margin-left: 1rem;
+
   }
 
-  &__upload-button {
-    background-color: $color-primary-BrainFlix-Blue;
-    width: 100%;
-    display: flex;
-    border: 0px solid black;
-    color: white;
-    margin: 1rem 0rem;
-    padding: 1rem 0rem;
-    align-items: center;
-    padding-left: auto;
+  &__test-icon {
+    color: black;
   }
 }
