@@ -19,8 +19,8 @@ function navigation() {
       </form>
       <div class="nav__avatar-container"></div>
     </div>
+    
     <Button icon={UploadSVG} text="UPLOAD"/>
-
   </div>
   );
 }
