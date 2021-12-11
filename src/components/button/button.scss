@@ -10,8 +10,6 @@
   border-radius: 4px;
   display: flex;
   border: 0;
-  margin: 1rem 0rem;
-  padding: 1rem 0rem;
   align-items: center;
   justify-content: center;
   position: relative;
@@ -19,7 +17,7 @@
   &__icon {
     position: absolute;
     left: 0;
-    padding-left: .5rem;
+    padding-left: .6rem;
     fill: red;
   }
 

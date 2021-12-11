@@ -5,7 +5,8 @@ import LogoSVG from "../../assets/images/BrainFlix-logo.svg";
 import SearchSVG from "../../assets/images/Icons/search.svg";
 import UploadSVG from "../../assets/images/Icons/upload.svg";
 
-import Button from "../Button/Button"
+import Button from '../Button/Button';
+import Avatar from '../Avatar/Avatar';
 
 function navigation() {
   return (
@@ -16,9 +17,8 @@ function navigation() {
         <img className="nav__search-icon" src={SearchSVG} alt="search"></img>
         <input className="nav__search-imput" type="text" name="name" placeholder="Search"></input>
       </form>
-      <div className="nav__avatar-container"></div>
+      <Avatar />
     </div>
-    
     <Button icon={UploadSVG} text="UPLOAD"/>
   </div>
   );

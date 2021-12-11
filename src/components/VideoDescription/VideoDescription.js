@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "./VideoDescription.scss";
+
 import ViewsSVG from "../../assets/images/Icons/views.svg";
 import likesSVG from "../../assets/images/Icons/likes.svg";
 
@@ -20,7 +21,6 @@ export default class VideoDescription extends Component {
   render() {
    
     return (
-      
     <div className="VideoDetails">
       <h1 className="VideoDetails__title">{this.state.VideoPlaying.title}</h1>
       <div className="VideoDetails__info-container">
@@ -36,8 +36,8 @@ export default class VideoDescription extends Component {
           <img className="test" src={likesSVG} alt="likes"></img> {this.state.VideoPlaying.likes}</p>
         </div>
       </div>
-    <p className="VideoDetails__description">{this.state.VideoPlaying.description}</p>
-  </div>
+      <p className="VideoDetails__description">{this.state.VideoPlaying.description}</p>
+    </div>
     );
   }
 }

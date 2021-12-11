@@ -1,0 +1,36 @@
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/typography.scss';
+
+.comments-input {
+  @include page-side-padding-mobile;
+  margin-bottom: 1rem;
+  &__length {
+    font-family: "Avenir-bold";
+  }
+
+  &__container {
+    display: flex;
+  }
+
+  &__avatar {
+    margin-top: 2.7rem;
+  }
+
+  &__label {
+    color: $color-primary-BrainFlix-Silver;
+    margin-bottom: .5rem;
+  }
+  &__input {
+    width: 100%;
+    resize: none;
+    outline: none !important;
+    margin-bottom: 1rem;
+  }
+  &__form {
+    width: 90%;
+    padding-left: 1rem;
+    margin-top: 1.5rem;
+  }
+
+}
