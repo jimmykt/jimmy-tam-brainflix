@@ -1,0 +1,51 @@
+@use '../../styles/partials/typography.scss';
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/mixins' as *;
+
+
+
+
+.VideoDetails {
+  @include page-side-padding-mobile;
+  &__title {
+    font-family: "Avenir-bold";
+    border-bottom: 1px solid $color-primary-BrainFlix-Silver;
+    padding-top: 1.5rem;
+    padding-bottom: 1rem;
+    font-size: 1.5rem;
+    font-weight: 500;
+  }
+
+  &__info-container {
+    border-bottom: 1px solid $color-primary-BrainFlix-Silver;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+
+  }
+
+  &__channel {
+    font-family: "Avenir-bold";
+    padding-bottom: 1rem;
+  }
+
+  &__date {
+    color: $color-primary-BrainFlix-Silver;
+  }
+
+  &__right-container {
+    color: $color-primary-BrainFlix-Silver;
+    margin-right: 2rem;
+  }
+
+  &__views {
+    padding-bottom: 1rem;
+  }
+
+  &__description {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+}
+

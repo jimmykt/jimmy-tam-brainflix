@@ -1,9 +1,10 @@
-import "./Navigation.scss"
-import "../../styles/partials/_global.scss"
+import "./Navigation.scss";
+import "../../styles/partials/_global.scss";
 
-import LogoSVG from "../../assets/images/BrainFlix-logo.svg"
-import SearchSVG from "../../assets/images/Icons/search.svg"
-import UploadSVG from "../../assets/images/Icons/upload.svg"
+import LogoSVG from "../../assets/images/BrainFlix-logo.svg";
+import SearchSVG from "../../assets/images/Icons/search.svg";
+import UploadSVG from "../../assets/images/Icons/upload.svg";
+
 import Button from "../Button/Button"
 
 function navigation() {

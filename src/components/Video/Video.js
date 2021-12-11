@@ -2,11 +2,13 @@ import React, { Component } from "react";
 import "./Video.scss";
 
 import VideosDetails from "../../data/video-details.json";
-import Videos from "../../data/videos.json";
+//import Videos from "../../data/videos.json";
+
+import VideoDescription from "../VideoDescription/VideoDescription"
 
 export default class Video extends Component {
   state = {
-    VideoPlaying: Videos[0],
+    VideoPlaying: VideosDetails[0],
   };
 
   testingfuntion = () => {
@@ -24,7 +26,10 @@ export default class Video extends Component {
     this.testingfuntion()
 
     return (
-    <video className="video" poster={this.state.VideoPlaying.image} controls></video>
+      <div>
+        <video className="video" poster={this.state.VideoPlaying.image} controls></video>
+        <VideoDescription video={this.state.VideoPlaying}/>
+      </div>
     );
   }
 }
