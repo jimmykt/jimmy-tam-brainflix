@@ -3,17 +3,17 @@ import "./Video.scss";
 
 export default class Video extends Component {
   state = {
-    VideoPlaying: this.props.videos[0],
+    videoPlaying: this.props.video,
   };
 
   setVideo = () => {
-    console.log(this.props.videos[0])
+    console.log(this.state)
   }
 
   render() {
     return (
       <div className="video">
-        <video className="video__player" poster={this.state.VideoPlaying.image} controls></video>
+        <video className="video__player" poster={this.state.videoPlaying.image} controls></video>
       </div>
     );
   }

@@ -7,36 +7,30 @@ import likesSVG from "../../assets/images/Icons/likes.svg";
 
 export default class VideoDescription extends Component {
   state = {
-    VideoPlaying: this.props.videos[0],
+    videoPlaying: this.props.video,
   };
 
-  convertDate = () => {
-    let date = new Date(this.state.VideoPlaying.timestamp);
-    const convertedDate = new Intl.DateTimeFormat('en-US', { month: '2-digit', day: '2-digit', year: 'numeric' }).format(date);
-    console.log(this.props.videos[0]);
 
-    return convertedDate;
-  }
  
   render() {
-   
+  //  {console.log(this.state.videoPlaying.timestamp)}
     return (
     <div className="VideoDetails">
-      <h1 className="VideoDetails__title">{this.state.VideoPlaying.title}</h1>
+      <h1 className="VideoDetails__title">{this.state.videoPlaying.title}</h1>
       <div className="VideoDetails__info-container">
         <div className="VideoDetails__left-container">
-          <p className="VideoDetails__channel">By {this.state.VideoPlaying.channel}</p>
-          <p className="VideoDetails__date">{this.convertDate()}</p>
+          <p className="VideoDetails__channel">By {this.state.videoPlaying.channel}</p>
+          <p className="VideoDetails__date">{this.props.convertDate(this.state.videoPlaying.timestamp)}</p>
         </div>
         <div className="VideoDetails__right-container">
           <p className="VideoDetails__views">          
-          <img className="test" src={ViewsSVG} alt="views"></img>  {this.state.VideoPlaying.views}
+          <img className="test" src={ViewsSVG} alt="views"></img>  {this.state.videoPlaying.views}
           </p>
           <p className="VideoDetails__likes">
-          <img className="test" src={likesSVG} alt="likes"></img> {this.state.VideoPlaying.likes}</p>
+          <img className="test" src={likesSVG} alt="likes"></img> {this.state.videoPlaying.likes}</p>
         </div>
       </div>
-      <p className="VideoDetails__description">{this.state.VideoPlaying.description}</p>
+      <p className="VideoDetails__description">{this.state.videoPlaying.description}</p>
     </div>
     );
   }

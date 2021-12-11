@@ -8,13 +8,16 @@ import Avatar from '../Avatar/Avatar';
 
 export default class CommentInput extends Component {
   state = {
-    commentsLength: 0,
+    commentsLength: this.props.video.comments.length,
   };
-
+  
+  setVideo = () => {
+    console.log(this.state)
+  }
   render() {
     return (
       <div className="comments-input">
-        <p className="comments-input__length">{this.props.videos[0].comments.length} Comments</p>
+        <p className="comments-input__length">{this.state.commentsLength} Comments</p>
         <div className="comments-input__container">
           <div className="comments-input__avatar"><Avatar/></div>
           <form className="comments-input__form">

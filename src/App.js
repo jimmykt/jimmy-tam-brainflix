@@ -9,20 +9,29 @@ import Navigation from './components/Navigation/Navigation';
 import Video from './components/Video/Video';
 import VideoDescription from './components/VideoDescription/VideoDescription';
 import CommentInput from './components/CommentInput/CommentInput';
+import CommentList from './components/CommentList/CommentList';
 
 export default class App extends Component {
   state = {
-    VideosData: VideosData,
-    VideosDetailsData: VideosDetailsData,
+    videosData: VideosData,
+    videosDetailsData: VideosDetailsData,
+    videoPlaying: VideosDetailsData[0],
+  }
+
+  convertDate = (timestamp) => {
+    let date = new Date(timestamp);
+    const convertedDate = new Intl.DateTimeFormat('en-US', { month: '2-digit', day: '2-digit', year: 'numeric' }).format(date);
+    return convertedDate;
   }
 
   render() {
     return (
       <div className="App">
         <Navigation />
-        <Video videos={this.state.VideosData}/>
-        <VideoDescription videos={this.state.VideosDetailsData}/>
-        <CommentInput videos={this.state.VideosDetailsData}/>
+        <Video video={this.state.videoPlaying}/>
+        <VideoDescription video={this.state.videoPlaying} convertDate={this.convertDate}/>
+        <CommentInput video={this.state.videoPlaying}/>
+        <CommentList video={this.state.videoPlaying} convertDate={this.convertDate}/>
 
       </div>
     );

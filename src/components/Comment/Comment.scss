@@ -1,0 +1,30 @@
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/typography.scss';
+
+.comment {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  border-top: 1px solid $color-seondary-BrainFlix-Mercury;
+
+  display: flex;
+
+  &__container {
+    margin-left: 1rem;
+    width: 85%;
+  }
+
+  &__info-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+  }
+
+  &__name {
+    font-family: "Avenir-bold";
+  }
+
+  &__date {
+    color: $color-primary-BrainFlix-Silver;
+  }
+}

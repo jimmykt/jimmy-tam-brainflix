@@ -9,7 +9,7 @@
   @include page-side-padding-mobile;
   &__title {
     font-family: "Avenir-bold";
-    border-bottom: 1px solid $color-primary-BrainFlix-Silver;
+    border-bottom: 1px solid $color-seondary-BrainFlix-Mercury;
     padding-top: 1.5rem;
     padding-bottom: 1rem;
     font-size: 1.5rem;
@@ -17,7 +17,7 @@
   }
 
   &__info-container {
-    border-bottom: 1px solid $color-primary-BrainFlix-Silver;
+    border-bottom: 1px solid $color-seondary-BrainFlix-Mercury;
     display: flex;
     justify-content: space-between;
     padding-bottom: 1rem;

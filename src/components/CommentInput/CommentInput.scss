@@ -19,13 +19,16 @@
 
   &__label {
     color: $color-primary-BrainFlix-Silver;
-    margin-bottom: .5rem;
+    font-size: .95rem;
   }
   &__input {
     width: 100%;
     resize: none;
     outline: none !important;
     margin-bottom: 1rem;
+    font-family: 'Avenir';
+    padding: .5rem
+
   }
   &__form {
     width: 90%;
