@@ -1,5 +1,7 @@
 // Global Styles
-@use './typography';
+@use '../../styles/partials/typography.scss';
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/mixins' as *;
 
 *, 
 *::before, 
@@ -13,17 +15,25 @@ body {
   font-family: 'Avenir';
   font-size: 13px;
   line-height: 18px;
+  @include tablet {
+    font-size: 14px;
+    line-height: 22px;
+  }
 }
 
 h1 {
   font-size: 24px;
   line-height: 32px;
+  @include tablet {
+    font-size: 33px;
+    line-height: 44px;
+  }
 }
 
 label,
 button {
   font-size: 12px;
   line-height: 20px;
-  font-weight: 600;
+  font-weight: 550;
 }
 
