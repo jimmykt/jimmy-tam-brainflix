@@ -8,7 +8,6 @@ export default class VideoList extends Component {
     upNext: this.props.videosData,
   };
 
-
   filterOutCurrentVideoArray = () => {
     const newArray = this.props.videosData.filter( (obj) => {
       return obj.id !== this.props.currentVideo.id;
@@ -16,13 +15,15 @@ export default class VideoList extends Component {
     return newArray
   }
   
-
   render() {
     return (
     <div className="next-videos">
       <p className="next-videos__title">NEXT VIDEOS</p>
       {this.filterOutCurrentVideoArray().map( (obj) => {
-        return <VideoCard key={obj.id} video={obj}/>
+        return <VideoCard 
+        key={obj.id} 
+        video={obj} 
+        videoClick={this.props.videoClick}/>
       })}
     </div>
     );

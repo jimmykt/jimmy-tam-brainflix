@@ -25,15 +25,30 @@ export default class App extends Component {
     return convertedDate;
   }
 
+  videoClick = (id) => {
+    let setId = id;
+    console.log(setId);
+    const setObj = this.state.videosDetailsData.find(obj => obj.id === setId);
+    this.setState({videoPlaying: setObj});
+    console.log(setObj);
+  }
+
   render() {
     return (
       <div className="App">
         <Navigation />
         <Video video={this.state.videoPlaying}/>
-        <VideoDescription video={this.state.videoPlaying} convertDate={this.convertDate}/>
+        <VideoDescription 
+          video={this.state.videoPlaying} 
+          convertDate={this.convertDate}/>
         <CommentInput video={this.state.videoPlaying}/>
-        <CommentList video={this.state.videoPlaying} convertDate={this.convertDate}/>
-        <VideoList videosData={this.state.videosData} currentVideo={this.state.videoPlaying}/>
+        <CommentList 
+          video={this.state.videoPlaying} 
+          convertDate={this.convertDate}/>
+        <VideoList 
+          videosData={this.state.videosData} 
+          currentVideo={this.state.videoPlaying}
+          videoClick={this.videoClick}/>
       </div>
     );
   }
