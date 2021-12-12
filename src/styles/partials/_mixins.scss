@@ -1,4 +1,4 @@
-@use './variables';
+@use './variables' as *;
 
 @mixin tablet {
   @media screen and (min-width: $breakpoint-tablet) {
@@ -16,3 +16,14 @@
   padding-left: 16px;
   padding-right: 16px;
 }
+
+@mixin page-side-padding-tablet {
+  padding-left: 36px;
+  padding-right: 36px;
+}
+
+@mixin reset-padding-margin {
+  margin: 0rem;
+  padding: 0rem;
+}
+

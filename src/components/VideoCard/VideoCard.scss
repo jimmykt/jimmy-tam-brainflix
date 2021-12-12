@@ -10,14 +10,17 @@
 
   &__image-container {
     background-color: $color-seondary-BrainFlix-Mercury;
+    width:8rem;
+    height: 5rem;
   }
   &__image {
-    min-width: 9rem;
-    min-height: 6rem;
-    max-width:8rem;
-    max-height: 5rem;
+    min-width: 8rem;
+    min-height: 5rem;
+    width:8rem;
+    height: 5rem;
     border-radius: 4px;
     object-fit: cover;
+    flex-grow: 1;
   }
 
   &__info-container {

@@ -17,9 +17,9 @@ function navigation() {
         <img className="nav__search-icon" src={SearchSVG} alt="search"></img>
         <input className="nav__search-imput" type="text" name="name" placeholder="Search"></input>
       </form>
-      <Avatar />
+      <div className="nav__avatar"><Avatar /></div>
     </div>
-    <Button icon={UploadSVG} text="UPLOAD"/>
+    <div className="nav__button"><Button icon={UploadSVG} text="UPLOAD"/></div>
   </div>
   );
 }
