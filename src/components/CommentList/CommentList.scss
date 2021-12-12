@@ -1,6 +1,7 @@
 @use '../../styles/partials/variables' as *;
 @use '../../styles/partials/mixins' as *;
 @use '../../styles/partials/typography.scss';
+
 .comment-list {
   @include page-side-padding-mobile;
   @include tablet {
@@ -8,6 +9,5 @@
   }
   @include desktop {
     @include reset-padding-margin;
-
   }
 }

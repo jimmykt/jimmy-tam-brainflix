@@ -1,7 +1,6 @@
 import './VideoDescription.scss';
-import ViewsSVG from "../../assets/images/Icons/views.svg";
-import likesSVG from "../../assets/images/Icons/likes.svg";
-
+import ViewsSVG from '../../assets/images/Icons/views.svg';
+import likesSVG from '../../assets/images/Icons/likes.svg';
 
 const VideoDescription = ({video, convertDate}) => {
   return (

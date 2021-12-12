@@ -1,6 +1,6 @@
-import "./CommentInput.scss";
+import './CommentInput.scss';
 
-import ButtonSVG from "../../assets/images/Icons/add_comment.svg";
+import ButtonSVG from '../../assets/images/Icons/add_comment.svg';
 
 import Button from '../Button/Button';
 import Avatar from '../Avatar/Avatar';

@@ -43,6 +43,7 @@
       position: absolute;
     }
   }
+  
   &__input {
     background-color: $color-seondary-BrainFlix-Alabaster;
     width: 100%;
@@ -60,6 +61,9 @@
       width: 75%;
       margin-bottom: 1rem;
       margin-top: 1.5rem;
+    }
+    @include desktop {
+      margin-bottom: 2rem;
     }
   }
 

@@ -1,7 +1,7 @@
-import React, { Component } from "react";
-import "./VideoList.scss";
+import React, { Component } from 'react';
+import './VideoList.scss';
 
-import VideoCard from "../VideoCard/VideoCard";
+import VideoCard from '../VideoCard/VideoCard';
 
 export default class VideoList extends Component {
   state = {

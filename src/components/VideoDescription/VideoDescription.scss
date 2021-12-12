@@ -2,14 +2,13 @@
 @use '../../styles/partials/variables' as *;
 @use '../../styles/partials/mixins' as *;
 
-
-
-
 .video-details {
   @include page-side-padding-mobile;
+
   @include tablet {
     @include page-side-padding-tablet;
   }
+  
   @include desktop {
     @include reset-padding-margin;
   }
@@ -81,6 +80,7 @@
     padding-bottom: 1rem;
     @include desktop {
       margin-right: 2rem;
+      padding-bottom: 2rem;
     }
   }
 }
