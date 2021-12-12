@@ -41,6 +41,7 @@ export default class App extends Component {
         <VideoDescription 
           video={this.state.videoPlaying} 
           convertDate={this.convertDate}/>
+          
         <CommentInput video={this.state.videoPlaying}/>
         <CommentList 
           video={this.state.videoPlaying} 
