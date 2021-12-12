@@ -6,12 +6,8 @@ export default class CommentList extends Component {
     commentList: this.props.video.comments,
   };
 
-  test = () => {
-    console.log(this.state.commentList);
-  }
 
   render() {
-    // {this.test()}
     return (
       <div className="comment-list">
 

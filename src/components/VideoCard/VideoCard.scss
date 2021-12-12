@@ -1,0 +1,35 @@
+@use '../../styles/partials/typography.scss';
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/mixins' as *;
+
+.video-card {
+
+  display: flex;
+  width: 100%;
+  padding-bottom: 1rem;
+
+  &__image-container {
+    background-color: $color-seondary-BrainFlix-Mercury;
+  }
+  &__image {
+    min-width: 9rem;
+    min-height: 6rem;
+    max-width:8rem;
+    max-height: 5rem;
+    border-radius: 4px;
+    object-fit: cover;
+  }
+
+  &__info-container {
+    padding-left: 1rem;
+  }
+
+  &__title {
+    font-family: 'Avenir-bold';
+    padding-bottom: 1rem;
+  }
+
+  &__channel {
+
+  }
+}

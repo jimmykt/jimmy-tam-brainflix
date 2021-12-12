@@ -1,12 +1,6 @@
 import './Comment.scss';
 
 const Comment = ({ comment, i, convertDate }) => {
-  const test = () => {
-    console.log(i);
-    console.log(convertDate);
-
-  }
-  // test()
   return (
       <div className="comment">
         <div className="avatarDefault"></div>
@@ -18,7 +12,6 @@ const Comment = ({ comment, i, convertDate }) => {
           <p className="comment__comment">{comment.comment}</p>
         </div>
       </div>
-      
   );
 };
 
