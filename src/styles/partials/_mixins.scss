@@ -27,3 +27,7 @@
   padding: 0rem;
 }
 
+@mixin reset-height-width {
+  width: 0rem;
+  height: 0rem;
+}
