@@ -17,8 +17,8 @@ export default class VideoList extends Component {
   
   render() {
     return (
-    <div className="next-videos">
-      <p className="next-videos__title">NEXT VIDEOS</p>
+    <div className="video-list">
+      <p className="video-list__title">NEXT VIDEOS</p>
       {this.filterOutCurrentVideoArray().map( (obj) => {
         return <VideoCard 
         key={obj.id} 

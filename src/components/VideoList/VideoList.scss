@@ -2,10 +2,13 @@
 @use '../../styles/partials/variables' as *;
 @use '../../styles/partials/mixins' as *;
 
-.next-videos {
+.video-list {
   @include page-side-padding-mobile;
   @include tablet {
     @include page-side-padding-tablet;
+  }
+  @include desktop {
+    @include reset-padding-margin;
   }
 
   &__title {

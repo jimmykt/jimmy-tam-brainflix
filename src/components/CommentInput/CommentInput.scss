@@ -9,6 +9,10 @@
     margin-top: 1rem;
     @include page-side-padding-tablet;
   }
+  @include desktop {
+    @include reset-padding-margin;
+    margin-right: 1rem;
+  }
 
   &__length {
     font-family: "Avenir-bold";

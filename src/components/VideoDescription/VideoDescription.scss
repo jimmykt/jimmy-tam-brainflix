@@ -11,7 +11,7 @@
     @include page-side-padding-tablet;
   }
   @include desktop {
-    @include page-side-padding-desktop;
+    @include reset-padding-margin;
   }
   
   &__title {
@@ -38,8 +38,6 @@
       padding-bottom: 0.5rem;
     }
   }
-
-  
 
   &__right-container {
     color: $color-primary-BrainFlix-Silver;
@@ -70,7 +68,6 @@
     color: $color-primary-BrainFlix-Silver;
   }
 
-
   &__views {
     padding-bottom: 1rem;
     @include tablet {
@@ -82,6 +79,9 @@
   &__description {
     padding-top: 1rem;
     padding-bottom: 1rem;
+    @include desktop {
+      margin-right: 2rem;
+    }
   }
 }
 

@@ -12,6 +12,9 @@
   &__container {
     margin-left: 1rem;
     width: 85%;
+    @include desktop {
+      width: 88%;
+    }
   }
 
   &__info-container {

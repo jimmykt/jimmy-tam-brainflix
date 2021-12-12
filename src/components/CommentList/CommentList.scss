@@ -6,4 +6,8 @@
   @include tablet {
     @include page-side-padding-tablet;
   }
+  @include desktop {
+    @include reset-padding-margin;
+
+  }
 }

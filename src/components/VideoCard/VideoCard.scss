@@ -9,6 +9,9 @@
   @include tablet {
     width: 45%;
   }
+  @include desktop {
+    width: 100%;
+  }
 
   &__image-container {
     background-color: $color-seondary-BrainFlix-Mercury;

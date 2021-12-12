@@ -36,18 +36,23 @@ export default class App extends Component {
       <div className="App">
         <Navigation />
         <Video video={this.state.videoPlaying}/>
-        <VideoDescription 
-          video={this.state.videoPlaying} 
-          convertDate={this.convertDate}/>
-          
-        <CommentInput video={this.state.videoPlaying}/>
-        <CommentList 
-          video={this.state.videoPlaying} 
-          convertDate={this.convertDate}/>
-        <VideoList 
-          videosData={this.state.videosData} 
-          currentVideo={this.state.videoPlaying}
-          videoClick={this.videoClick}/>
+        <div className='App__container'>
+          <div className='App__container-left'>
+            <VideoDescription 
+              video={this.state.videoPlaying} 
+              convertDate={this.convertDate}/>  
+          <CommentInput video={this.state.videoPlaying}/>
+          <CommentList 
+            video={this.state.videoPlaying} 
+            convertDate={this.convertDate}/>
+          </div>
+          <div className='App__container-right'>
+            <VideoList 
+              videosData={this.state.videosData} 
+              currentVideo={this.state.videoPlaying}
+              videoClick={this.videoClick}/>
+          </div>
+        </div>
       </div>
     );
   }
