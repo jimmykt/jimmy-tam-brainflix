@@ -3,10 +3,12 @@
 @use '../../styles/partials/mixins' as *;
 
 .video-card {
-
   display: flex;
   width: 100%;
   padding-bottom: 1rem;
+  @include tablet {
+    width: 45%;
+  }
 
   &__image-container {
     background-color: $color-seondary-BrainFlix-Mercury;

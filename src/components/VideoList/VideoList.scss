@@ -4,6 +4,9 @@
 
 .next-videos {
   @include page-side-padding-mobile;
+  @include tablet {
+    @include page-side-padding-tablet;
+  }
 
   &__title {
     border-top: 1px solid $color-seondary-BrainFlix-Mercury;

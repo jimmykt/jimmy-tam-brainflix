@@ -3,5 +3,7 @@
 @use '../../styles/partials/typography.scss';
 .comment-list {
   @include page-side-padding-mobile;
-
+  @include tablet {
+    @include page-side-padding-tablet;
+  }
 }
