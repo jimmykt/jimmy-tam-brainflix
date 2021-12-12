@@ -5,34 +5,71 @@
 .comments-input {
   @include page-side-padding-mobile;
   margin-bottom: 1rem;
+  @include tablet {
+    margin-top: 1rem;
+    @include page-side-padding-tablet;
+  }
+
   &__length {
     font-family: "Avenir-bold";
+    @include tablet {
+      margin-bottom: 1.5rem;
+    }
   }
 
   &__container {
     display: flex;
+    @include tablet {
+      align-items: center;
+    }
   }
 
   &__avatar {
     margin-top: 2.7rem;
+    @include tablet {
+      margin-top: 0rem;
+      margin-right: 1rem;
+    }
   }
 
   &__label {
     color: $color-primary-BrainFlix-Silver;
     font-size: .95rem;
+    @include tablet {
+      position: absolute;
+    }
   }
   &__input {
+    background-color: $color-seondary-BrainFlix-Alabaster;
     width: 100%;
     resize: none;
     outline: none !important;
     margin-bottom: 1rem;
     font-family: 'Avenir';
-    padding: .5rem
-
+    padding: .5rem;
+    height: 5rem;
+    border-radius: 4px;
+    @include tablet {
+      height: 2.5rem;
+      margin-bottom: 0rem;
+      margin-right: 1rem;
+      width: 75%;
+      margin-bottom: 1rem;
+      margin-top: 1.5rem;
+    }
   }
+
   &__form {
     width: 90%;
     padding-left: 1rem;
+    margin-top: 1.5rem;
+    @include tablet {
+      @include reset-padding-margin;
+      display: flex;
+    }
+  }
+
+  &__button {
     margin-top: 1.5rem;
   }
 

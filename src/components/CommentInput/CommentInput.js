@@ -13,8 +13,8 @@ const CommentInput = ({video}) => {
       <div className="comments-input__avatar"><Avatar/></div>
       <form className="comments-input__form">
         <label className="comments-input__label" htmlFor="comments">JOIN THE CONVERSATION</label>
-        <textarea className="comments-input__input" name="comments" id="comments" placeholder="Add a new comment" rows="4"></textarea>
-        <Button className="comments-input__button" icon={ButtonSVG} text="COMMENT"/>
+        <textarea className="comments-input__input" name="comments" id="comments" placeholder="Add a new comment"></textarea>
+        <div className="comments-input__button"><Button icon={ButtonSVG} text="COMMENT"/></div>
       </form>
     </div>
   </div>
