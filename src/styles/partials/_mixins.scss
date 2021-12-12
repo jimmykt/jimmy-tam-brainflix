@@ -22,6 +22,11 @@
   padding-right: 36px;
 }
 
+@mixin page-side-padding-desktop {
+  padding-left: 72px;
+  padding-right: 72px;
+}
+
 @mixin reset-padding-margin {
   margin: 0rem;
   padding: 0rem;
