@@ -7,6 +7,7 @@
   flex-direction: column;
   align-items: center;
   position: relative;
+  
   @include tablet {
     @include page-side-padding-tablet;
     display: flex;
