@@ -1,5 +1,6 @@
 import './Navigation.scss';
 import '../../styles/partials/_global.scss';
+//test
 
 import LogoSVG from "../../assets/images/BrainFlix-logo.svg";
 import SearchSVG from "../../assets/images/Icons/search.svg";
