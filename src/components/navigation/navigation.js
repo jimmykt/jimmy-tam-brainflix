@@ -12,13 +12,11 @@ function navigation() {
   return (
   <div className="nav">
     <a href="../../App.js"><img className="nav__logo" src={LogoSVG} alt="Logo"></img></a>
-    <div className="nav__search-container">
-      <form className="nav__form">
-        <img className="nav__search-icon" src={SearchSVG} alt="search"></img>
-        <input className="nav__search-imput" type="text" name="name" placeholder="Search"></input>
-      </form>
-      <div className="nav__avatar-container"><Avatar /></div>
-    </div>
+    <form className="nav__form">
+      <img className="nav__search-icon" src={SearchSVG} alt="search"></img>
+      <input className="nav__search-imput" type="text" name="name" placeholder="Search"></input>
+    </form>
+    <div className="nav__avatar-container"><Avatar /></div>
     <Button icon={UploadSVG} text="UPLOAD"/>
   </div>
   );
