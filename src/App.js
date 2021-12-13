@@ -28,7 +28,6 @@ export default class App extends Component {
   videoClick = (id) => {
     let setId = id;
     const setObj = this.state.videosDetailsData.find(obj => obj.id === setId);
-    console.log("test");
     this.setState({videoPlaying: setObj});
   }
 
