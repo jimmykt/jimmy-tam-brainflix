@@ -15,7 +15,7 @@
   
   &__title {
     font-family: "Avenir-bold";
-    border-bottom: 1px solid $color-seondary-BrainFlix-Mercury;
+    border-bottom: .0625rem solid $color-seondary-BrainFlix-Mercury;
     padding-top: 1.5rem;
     padding-bottom: 1rem;
     font-weight: 500;
@@ -27,7 +27,7 @@
   }
 
   &__info-container {
-    border-bottom: 1px solid $color-seondary-BrainFlix-Mercury;
+    border-bottom: .0625rem solid $color-seondary-BrainFlix-Mercury;
     display: flex;
     justify-content: space-between;
     padding-bottom: 1rem;

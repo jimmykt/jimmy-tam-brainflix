@@ -11,7 +11,7 @@ const VideoCard = ({video, videoClick}) => {
       <div className="video-card" onClick={handClick}>
         <div className='video-card__image-container'><img className="video-card__image" src={video.image} alt={video.title}></img></div>
         <div className="video-card__info-container">
-          <p className="video-card__title">{video.title}</p>
+          <h3 className="video-card__title">{video.title}</h3>
           <p className="video-card__channel">{video.channel}</p>
         </div>
       </div>

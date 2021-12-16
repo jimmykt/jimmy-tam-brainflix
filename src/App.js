@@ -5,7 +5,7 @@ import './styles/partials/_global.scss';
 import VideosData from './data/videos.json';
 import VideosDetailsData from './data/video-details.json';
 
-import Navigation from './components/Navigation/Navigation';
+import Header from './components/Header/Header';
 import Video from './components/Video/Video';
 import VideoDescription from './components/VideoDescription/VideoDescription';
 import CommentInput from './components/CommentInput/CommentInput';
@@ -34,7 +34,7 @@ export default class App extends Component {
   render() {
     return (
       <div className="App">
-        <Navigation />
+        <Header />
         <Video video={this.state.videoPlaying}/>
         <div className='App__container'>
           <div className='App__container-left'>

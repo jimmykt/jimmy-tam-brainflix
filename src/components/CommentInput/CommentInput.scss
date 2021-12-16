@@ -55,7 +55,7 @@
     height: 5rem;
     border-radius: 4px;
     &:focus { 
-      border: 2px solid $color-primary-BrainFlix-Blue;
+      border: .125rem solid $color-primary-BrainFlix-Blue;
     }
 
     @include tablet {
