@@ -12,47 +12,68 @@
     @include page-side-padding-tablet;
     display: flex;
     flex-direction: row;
-    align-items: center; 
     padding-top: 1rem;
-    position: relative;
+    justify-content: space-between;
   }
   
   @include desktop {
     @include page-side-padding-desktop;
   }
 
+
+  &__content {
+    width: 100%;
+
+    @include tablet {
+      width: 30rem;
+      display: flex;
+    }
+
+    @include desktop {
+      width: 32rem;
+      display: flex;
+    }
+  }
+
+
   &__logo {
     margin: 1rem 0rem;
     max-width: 7.5rem;
     max-height: 7.5rem;
+
     @include tablet {
       @include reset-padding-margin;
-      margin-right: 5rem;
     }
+
     @include desktop {
-      margin-right: 29rem;
     }
   }
+
 
   &__form {
     width: 100%;
     margin-bottom: 1rem;
+
     @include tablet {
       @include reset-padding-margin;
-      width: 40%;
+      width: 15rem;
       margin-right: 1rem;
+      margin-left: 1.25rem;
     }
+
     @include desktop {
-      width: 28%;
+      width: 15rem;
       margin-right: 1rem;
     }
   }
+
 
   &__search-icon {
     position: absolute;
     padding-left: .5rem;
     margin-top: .5rem;
   }
+
 
   &__search-imput {
     background-color: $color-seondary-BrainFlix-Alabaster;
@@ -62,9 +83,11 @@
     padding-left: 1.875rem;
     width: 85%;
     border-radius: .25rem;
+
     &:focus { 
       border: .125rem solid $color-primary-BrainFlix-Blue;
     }
+
     @include tablet {
       width: 100%;
     }
@@ -80,6 +103,7 @@
     position: absolute;
     right: 1rem;
     top: 3.7rem;
+
     @include tablet {
       top: 1rem;
       right: 2.25rem;
