@@ -7,7 +7,7 @@
   width: 100%;
   padding-bottom: 1rem;
   @include tablet {
-    width: 45%;
+    width: 50%;
   }
   @include desktop {
     width: 100%;
@@ -34,7 +34,13 @@
   }
 
   &__title {
-    font-family: 'Avenir-bold';
     padding-bottom: 1rem;
+    font-weight: 600;
+    font-size: .77rem;
+    
+    @include tablet {
+      font-size: .875rem;
+    }
+
   }
 }

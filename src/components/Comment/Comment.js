@@ -2,7 +2,7 @@ import './Comment.scss';
 
 const Comment = ({ comment, i, convertDate }) => {
   return (
-      <div className="comment">
+      <article className="comment">
         <div className="avatarDefault"></div>
         <div className="comment__container">
           <div className="comment__info-container">
@@ -11,7 +11,7 @@ const Comment = ({ comment, i, convertDate }) => {
           </div>
           <p className="comment__comment">{comment.comment}</p>
         </div>
-      </div>
+      </article>
   );
 };
 

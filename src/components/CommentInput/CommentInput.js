@@ -7,7 +7,7 @@ import Avatar from '../Avatar/Avatar';
 
 const CommentInput = ({video}) => {
   return (
-  <div className="comments-input">
+  <section className="comments-input">
     <p className="comments-input__length">{video.comments.length} Comments</p>
     <div className="comments-input__container">
       <div className="comments-input__avatar"><Avatar/></div>
@@ -17,7 +17,7 @@ const CommentInput = ({video}) => {
         <div className="comments-input__button"><Button icon={ButtonSVG} text="COMMENT"/></div>
       </form>
     </div>
-  </div>
+  </section>
   );
 };
 

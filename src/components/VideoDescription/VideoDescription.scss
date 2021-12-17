@@ -13,18 +13,19 @@
     @include reset-padding-margin;
   }
   
+
   &__title {
-    font-family: "Avenir-bold";
     border-bottom: .0625rem solid $color-seondary-BrainFlix-Mercury;
     padding-top: 1.5rem;
     padding-bottom: 1rem;
-    font-weight: 500;
+
     @include tablet {
       border-bottom: 0px;
       padding-top: 2.25rem;
       padding-bottom: 1.5rem;
     }
   }
+
 
   &__info-container {
     border-bottom: .0625rem solid $color-seondary-BrainFlix-Mercury;
@@ -38,6 +39,7 @@
     }
   }
 
+
   &__right-container {
     color: $color-primary-BrainFlix-Silver;
     margin-right: 2rem;
@@ -47,6 +49,7 @@
     }
   }
 
+
   &__left-container {
     @include tablet {
       display: flex;
@@ -54,18 +57,21 @@
     }
   }
 
+
   &__channel {
-    font-family: "Avenir-bold";
     padding-bottom: 1rem;
+    font-weight: 600;
     @include tablet {
       padding-bottom: 0rem;
       margin-right: 2.5rem;
     }
   }
 
+
   &__date {
     color: $color-primary-BrainFlix-Silver;
   }
+
 
   &__views {
     padding-bottom: 1rem;
@@ -74,6 +80,7 @@
       margin-right: 2.5rem;
     }
   }
+
 
   &__description {
     padding-top: 1rem;

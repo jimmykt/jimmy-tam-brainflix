@@ -36,8 +36,8 @@ export default class App extends Component {
       <div className="App">
         <Header />
         <Video video={this.state.videoPlaying}/>
-        <div className='App__container'>
-          <div className='App__container-left'>
+        <main className='App__container'>
+          <section className='App__container-left'>
             <VideoDescription 
               video={this.state.videoPlaying} 
               convertDate={this.convertDate}/>  
@@ -45,14 +45,14 @@ export default class App extends Component {
           <CommentList 
             video={this.state.videoPlaying} 
             convertDate={this.convertDate}/>
-          </div>
-          <div className='App__container-right'>
+          </section>
+          <aside className='App__container-right'>
             <VideoList 
               videosData={this.state.videosData} 
               currentVideo={this.state.videoPlaying}
               videoClick={this.videoClick}/>
-          </div>
-        </div>
+          </aside>
+        </main>
       </div>
     );
   }

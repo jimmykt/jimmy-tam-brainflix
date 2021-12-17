@@ -4,7 +4,7 @@ import likesSVG from '../../assets/images/Icons/likes.svg';
 
 const VideoDescription = ({video, convertDate}) => {
   return (
-  <div className="video-details">
+  <section className="video-details">
     <h1 className="video-details__title">{video.title}</h1>
     <div className="video-details__info-container">
       <div className="video-details__left-container">
@@ -20,7 +20,7 @@ const VideoDescription = ({video, convertDate}) => {
       </div>
     </div>
     <p className="video-details__description">{video.description}</p>
-  </div>
+  </section>
   );
 };
 

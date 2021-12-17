@@ -20,7 +20,6 @@ function Header() {
       <div className="header__avatar-container"><Avatar /></div>
       <Button icon={UploadSVG} text="UPLOAD"/>
     </div>
-    
   </header>
   );
 }
