@@ -92,11 +92,13 @@
     }
   }
 
+
   &__button {
     @include tablet {
       width: 100%;
     }
   }
+
 
   &__avatar-container {
     position: absolute;
