@@ -1,0 +1,25 @@
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/variables' as *;
+
+.main {
+  &__container {
+    @include desktop {
+      display: flex;
+      @include page-side-padding-desktop;
+    }
+  }
+
+  &__container-left {
+    @include desktop {
+      width: 65%;
+      border-right: 1px solid $color-seondary-BrainFlix-Mercury;
+    }
+  }
+  
+  &__container-right {
+    @include desktop {
+      width: 35%;
+      margin-left: 1rem;
+    }
+  }
+}
