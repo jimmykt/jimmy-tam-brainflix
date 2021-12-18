@@ -1,14 +1,12 @@
 import './CommentInput.scss';
-
 import ButtonSVG from '../../assets/images/Icons/add_comment.svg';
-
 import Button from '../Button/Button';
 import Avatar from '../Avatar/Avatar';
 
-const CommentInput = ({video}) => {
+const CommentInput = (props) => {
   return (
   <section className="comments-input">
-    <p className="comments-input__length">{video.comments.length} Comments</p>
+    <h3 className="comments-input__length">3 Comments</h3>
     <div className="comments-input__container">
       <div className="comments-input__avatar"><Avatar/></div>
       <form className="comments-input__form">

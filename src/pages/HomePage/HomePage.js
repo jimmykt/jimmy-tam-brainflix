@@ -1,5 +1,7 @@
 import './HomePage.scss';
 import { Component } from 'react';
+import axios from 'axios';
+
 
 import Video from '../../components/Video/Video'
 import VideoDescription from '../../components/VideoDescription/VideoDescription';
@@ -8,77 +10,51 @@ import CommentList from '../../components/CommentList/CommentList';
 import VideoList from '../../components/VideoList/VideoList';
 
 
-//delete later
-import VideoData from '../../data/videos.json';
-import VideosDetailsData from '../../data/video-details.json';
 
 
+const API_KEY = "/?api_key=4354755b-7920-4743-83e9-cb45372f1579";
+const API = "https://project-2-api.herokuapp.com"
 
 class HomePage extends Component {
   state = {
-    videosData: VideoData,
-    videosDetailsData: VideosDetailsData,
-    videoPlaying: VideosDetailsData[0],
+    videosData: [],
+    videoPlaying: {},
   }
 
-  convertDate = (timestamp) => {
-    let date = new Date(timestamp);
-    const convertedDate = new Intl.DateTimeFormat('en-US', { month: '2-digit', day: '2-digit', year: 'numeric' }).format(date);
-    return convertedDate;
-  }
-
-  videoClick = (id) => {
-    let setId = id;
-    const setObj = this.state.videosDetailsData.find(obj => obj.id === setId);
-    this.setState({videoPlaying: setObj});
+  componentWillMount() {
+    axios.get(API + "/videos/84e96018-4022-434e-80bf-000ce4cd12b8" + API_KEY)
+    .then((response) => {
+      this.setState({
+        videoPlaying: response.data
+      })
+    })
   }
 
   render() {
     return (
       <main className="main">
-        <Video video={this.state.videoPlaying}/>
+        <Video video={this.state.videoPlaying}/> 
+        
         <div className="main__container">
-          <section lassName="main__container-left">
-            <VideoDescription 
-              video={this.state.videoPlaying} 
-              convertDate={this.convertDate}/> 
+          <section className="main__container-left">
+            <VideoDescription video={this.state.videoPlaying} /> 
+            
             <CommentInput video={this.state.videoPlaying}/>
-            <CommentList 
-              video={this.state.videoPlaying} 
-              convertDate={this.convertDate}/>
+            
+            <CommentList video={this.state.videoPlaying} />
+             
           </section>
           <aside className="main__container-right">
             <VideoList 
               videosData={this.state.videosData} 
-              currentVideo={this.state.videoPlaying}
-              videoClick={this.videoClick}/>
-          </aside>
+              currentVideo={this.state.videoPlaying}/>  
+          </aside>  
+          
         </div>
+        
       </main>
     )
   }
 }
 
 export default HomePage;
-
-
-{/* 
-        <Video video={this.state.videoPlaying}/>
-        <main className='App__container'>
-          <section className='App__container-left'>
-            <VideoDescription 
-              video={this.state.videoPlaying} 
-              convertDate={this.convertDate}/>  
-          <CommentInput video={this.state.videoPlaying}/>
-          <CommentList 
-            video={this.state.videoPlaying} 
-            convertDate={this.convertDate}/>
-          </section>
-          <aside className='App__container-right'>
-            <VideoList 
-              videosData={this.state.videosData} 
-              currentVideo={this.state.videoPlaying}
-              videoClick={this.videoClick}/>
-          </aside>
-        </main>
-         */}

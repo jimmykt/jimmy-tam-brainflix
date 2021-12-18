@@ -1,8 +1,10 @@
 import './VideoDescription.scss';
+import { convertDate } from '../../util/util';
 import ViewsSVG from '../../assets/images/Icons/views.svg';
 import likesSVG from '../../assets/images/Icons/likes.svg';
 
-const VideoDescription = ({video, convertDate}) => {
+const VideoDescription = ({video}) => {
+
   return (
   <section className="video-details">
     <h1 className="video-details__title">{video.title}</h1>
