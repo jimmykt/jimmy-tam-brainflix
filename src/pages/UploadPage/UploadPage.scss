@@ -7,22 +7,60 @@
   border-top: .0625rem solid $color-seondary-BrainFlix-Mercury;
   padding-top: 1rem;
   margin-top: 1rem;
+  @include tablet {
+    @include page-side-padding-tablet;
+    padding-bottom: 2rem
+
+  }
+  
+  @include desktop {
+    @include page-side-padding-desktop;
+  }
+
 
   &__title {
     padding-top: 1rem;
+    @include tablet {
+      padding-bottom: 2rem;
+      border-bottom: .0625rem solid $color-seondary-BrainFlix-Mercury;
+    }
+  }
+
+  &__thumbnail {
+    @include desktop {
+      width: 40%;
+    }
+  }
+
+  &__form {
+    @include desktop {
+      width: 60%;
+    }
   }
 
   &__thumbnail-title {
     color: $color-primary-BrainFlix-Silver;
     padding-top: 2rem;
-    font-size: .8125rem;
     padding-bottom: .4rem;
+    @include tablet {
+      @include reset-padding-margin;
+    }
+    @include desktop {
+      font-size: 1rem;
+      display: block;
+    }
   }
 
   &__thumbnail-image {
     width: 100%;
     border-radius: .25rem;
     padding-bottom: 1rem;
+    @include tablet {
+      width: 50%;
+    }
+    @include desktop {
+      width: 100%;
+    }
   }
 
   &__label-title {
@@ -35,7 +73,6 @@
     width: 100%;
     height: 2.4rem;
     padding-left: 1rem;
-    width: 85%;
     border-radius: .25rem;
     margin-bottom: 1rem;
   }
@@ -46,6 +83,8 @@
 
   &__input-description {
     background-color: $color-seondary-BrainFlix-Alabaster;
+    border: .0625rem solid $color-primary-BrainFlix-Silver;
+
     font-family: 'Avenir';
     width: 100%;
     resize: none;
@@ -54,6 +93,7 @@
     padding: .5rem;
     height: 5rem;
     border-radius: 4px;
+
     &:focus { 
       border: .125rem solid $color-primary-BrainFlix-Blue;
     }
@@ -61,13 +101,37 @@
 
   &__button-publish {
     margin-bottom: 1rem;
+    @include tablet {
+      @include reset-padding-margin;
+      margin-right: 1rem;
+    }
   }
 
   &__button-cancel {
     margin-top: 2rem;
     margin-bottom: 2rem;
-
+    @include tablet {
+      @include reset-padding-margin;
+    }
   }
 
+  &__container {
+    @include desktop {
+      display: flex;
+      padding-top: 1rem;
+    }
+  }
+
+  &__buttons {
+    @include tablet {
+      border-top: .0625rem solid $color-seondary-BrainFlix-Mercury;
+      padding-top: 1.5rem;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      flex-direction: row-reverse;
+    }
+  }
+  
 }
 
