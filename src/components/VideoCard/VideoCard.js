@@ -1,13 +1,8 @@
 import './VideoCard.scss';
 
 const VideoCard = ({video}) => {
-
-  const handClick = () => {
-    let id = video.id;
-  }
-
   return (
-      <article className="video-card" onClick={handClick}>
+      <article className="video-card" >
         <div className='video-card__image-container'><img className="video-card__image" src={video.image} alt={video.title}></img></div>
         <div className="video-card__info-container">
           <h3 className="video-card__title">{video.title}</h3>
