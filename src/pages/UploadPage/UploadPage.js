@@ -1,10 +1,8 @@
 import './UploadPage.scss'
 import { Link } from 'react-router-dom';
 import { useHistory } from "react-router-dom";
-
 import { Button } from '../../components/Button/Button';
 import { CancelButton } from '../../components/Button/Button';
-
 import thumbnailImage from '../../assets/images/Upload-video-preview.jpg'
 import UploadSVG from "../../assets/images/Icons/upload.svg";
 
@@ -47,7 +45,6 @@ function UploadPage() {
       <div className="upload__button-publish" ><Button icon={UploadSVG} text="PUBLISH" function={uploadClick} /></div>
       <div className="upload__button-cancel"><CancelButton text="CANCEL" function={cancelClick} /></div>
     </div>
-      
     </main>
   )
 }

@@ -1,6 +1,6 @@
 import './Button.scss';
 
-export  function Button(props) {
+export function Button(props) {
   return (
   <button className="button" onClick={props.function}>
     <img className="button__icon" src={props.icon} alt="icon"/>

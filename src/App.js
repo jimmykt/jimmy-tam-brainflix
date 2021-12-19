@@ -14,7 +14,7 @@ function App() {
     <BrowserRouter>
       <Header />
       <Switch>
-        <Route path="/" component={HomePage} exact />
+        <Route path="/" component={HomePage} exact  />
         <Route path="/video/:id" component={HomePage} />
         <Route path="/upload" component={UploadPage} />
 
