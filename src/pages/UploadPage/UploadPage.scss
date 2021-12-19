@@ -29,13 +29,14 @@
 
   &__thumbnail {
     @include desktop {
-      width: 40%;
+      width: 27%;
+      padding-right: 1rem;
     }
   }
 
   &__form {
     @include desktop {
-      width: 60%;
+      width: 73%;
     }
   }
 
