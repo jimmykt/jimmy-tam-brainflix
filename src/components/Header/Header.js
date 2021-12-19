@@ -18,7 +18,7 @@ function Header() {
       </form>
       <div className="header__avatar-container"><Avatar /></div>
 
-      <Link to="/upload"><Button icon={UploadSVG} text="UPLOAD" /></Link>
+      <Link to="/upload" className='link'><Button icon={UploadSVG} text="UPLOAD" /></Link>
     </div>
   </header>
   );
