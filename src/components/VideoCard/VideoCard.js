@@ -1,10 +1,9 @@
 import './VideoCard.scss';
 
-const VideoCard = ({video, videoClick}) => {
+const VideoCard = ({video}) => {
 
   const handClick = () => {
     let id = video.id;
-    videoClick(id);
   }
 
   return (

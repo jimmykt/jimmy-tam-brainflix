@@ -1,22 +1,26 @@
 import './CommentList.scss';
 import Comment from '../Comment/Comment';
 
-const CommentList = ({video}) => {
-  console.log(video);
-  const name = video;
+const CommentList = (props) => {
+  let commentsAray = [];
+  if(props.video.comments) {
+    commentsAray = props.video.comments;
+  }
+  //console.log(commentsAray);
+  
   return (
   <section className="comment-list">
-    
+    {commentsAray.map((comment) => 
+      <Comment key={comment.id} comment={comment}/>
+    )}
 
-
-{/* 
-    {video.comments.map((comment, i) => {
-      return <Comment key={i} comment={comment}/>
-    })}
- */}
-
+    {/* 
+     {comments ? 
+     comments.map((comment) => 
+      <Comment key={comment.id} comment={comment}/>) 
+      : "Loading"}
+       */}
   </section>
-
   );
 };
 

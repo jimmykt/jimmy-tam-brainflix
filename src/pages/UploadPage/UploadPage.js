@@ -1,11 +1,9 @@
-import Header from '../../components/Header/Header';
-
 
 
 function UploadPage() {
   return (
     <div>
-
+      Upload Pageeee
     </div>
   )
 }
