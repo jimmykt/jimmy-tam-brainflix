@@ -26,52 +26,44 @@ class HomePage extends Component {
     //set videoData state that doesnt include that video currently being played
     axios.get(API + "/videos" + API_KEY)
     .then((response) => {
-      const filterArray = response.data.filter((obj) => {
-        return obj.id !== this.state.videoPlaying.id;
-      })
       this.setState({
-        videoData: filterArray
+        videoData: response.data
       })
     })
   }
 
-
+  // update state change
   componentDidUpdate(prevProps) {
-    console.log(this.props.match.params)
-    console.log(prevProps.match.params)
-
-    if (this.props.match.params.Id !== prevProps.match.params.Id) {
-  
-    }
-    /*
-    axios.get(API + "" + API_KEY)
-    .then((response) => {
-      console.log(response.data)
-      this.setState({
-        videoPlaying: response.data,
+    let id = this.props.match.params.id;
+    if(this.props.match.params.id !== prevProps.match.params.id) {
+      axios.get(API + "/videos/"+ id + API_KEY)
+      .then((response) => {
+        console.log(response.data)
+        this.setState({
+          videoPlaying: response.data,
+        })
       })
-    })
-    */
-
-  // const foundPlanet = planets.find((planet) 
-  // => planet.id === props.match.params.planetId);
+    }
   }
+
+    
 
 
 
   render() {
     return (
       <main className="main">
-        <Video video={this.state.videoPlaying}/> 
+        <Video video={this.state.videoPlaying} /> 
         <div className="main__container">
           <section className="main__container-left">
             <VideoDescription video={this.state.videoPlaying} /> 
-            <CommentInput video={this.state.videoPlaying}/>
+            <CommentInput video={this.state.videoPlaying} />
             <CommentList video={this.state.videoPlaying} />
           </section>
           <aside className="main__container-right">
             <VideoList 
-              videoData={this.state.videoData}/> 
+              videoData={this.state.videoData}
+              videoPlaying={this.state.videoPlaying} /> 
           </aside>  
         </div>
       </main>

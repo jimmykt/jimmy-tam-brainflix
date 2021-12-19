@@ -6,11 +6,15 @@ import VideoCard from '../VideoCard/VideoCard';
 import { API, API_KEY } from '../../util/util';
 
 
-const VideoList = ({videoData}) => {
+const VideoList = ({videoData, videoPlaying}) => {
+  const filterArray = videoData.filter((obj) => {
+    return obj.id !== videoPlaying.id;
+  })
+
   return (
     <section className="video-list">
       <p className="video-list__title">NEXT VIDEOS</p>
-      {videoData.map((obj) => {
+      {filterArray.map((obj) => {
         return <Link to={obj.id}key={obj.id} ><VideoCard video={obj} /></Link>
       })}
     </section>
@@ -26,7 +30,9 @@ export default VideoList;
 
 /*
 
-
+      const filterArray = response.data.filter((obj) => {
+        return obj.id !== this.state.videoPlaying.id;
+      })
 
 export default class VideoList extends Component {
   state = {
