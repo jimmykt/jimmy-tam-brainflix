@@ -1,6 +1,6 @@
 import './Button.scss';
 
-function Button(props) {
+export function Button(props) {
   return (
   <button className="button">
     <img className="button__icon" src={props.icon} alt="icon"/>
@@ -10,3 +10,15 @@ function Button(props) {
 }
 
 export default Button;
+
+
+
+
+export function CancelButton(props) {
+  return (
+  <button className="cancel-button">
+    <p className="cancel-button__text">{props.text}</p>
+  </button>
+  )
+}
+

@@ -32,11 +32,12 @@ class HomePage extends Component {
     })
   }
 
+
   // update state change
   componentDidUpdate(prevProps) {
     let id = this.props.match.params.id;
     if(this.props.match.params.id !== prevProps.match.params.id) {
-      axios.get(API + "/videos/"+ id + API_KEY)
+      axios.get(API + "/videos/" + id + API_KEY)
       .then((response) => {
         console.log(response.data)
         this.setState({
@@ -45,10 +46,6 @@ class HomePage extends Component {
       })
     }
   }
-
-    
-
-
 
   render() {
     return (

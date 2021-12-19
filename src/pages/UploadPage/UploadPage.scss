@@ -1,0 +1,73 @@
+@use '../../styles/partials/typography.scss';
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/mixins' as *;
+
+.upload {
+  @include page-side-padding-mobile;
+  border-top: .0625rem solid $color-seondary-BrainFlix-Mercury;
+  padding-top: 1rem;
+  margin-top: 1rem;
+
+  &__title {
+    padding-top: 1rem;
+  }
+
+  &__thumbnail-title {
+    color: $color-primary-BrainFlix-Silver;
+    padding-top: 2rem;
+    font-size: .8125rem;
+    padding-bottom: .4rem;
+  }
+
+  &__thumbnail-image {
+    width: 100%;
+    border-radius: .25rem;
+    padding-bottom: 1rem;
+  }
+
+  &__label-title {
+    color: $color-primary-BrainFlix-Silver;
+  }
+
+  &__input-title {
+    background-color: $color-seondary-BrainFlix-Alabaster;
+    border: .0625rem solid $color-primary-BrainFlix-Silver;
+    width: 100%;
+    height: 2.4rem;
+    padding-left: 1rem;
+    width: 85%;
+    border-radius: .25rem;
+    margin-bottom: 1rem;
+  }
+
+  &__label-description {
+    color: $color-primary-BrainFlix-Silver;
+  }
+
+  &__input-description {
+    background-color: $color-seondary-BrainFlix-Alabaster;
+    font-family: 'Avenir';
+    width: 100%;
+    resize: none;
+    outline: none !important;
+    margin-bottom: 1rem;
+    padding: .5rem;
+    height: 5rem;
+    border-radius: 4px;
+    &:focus { 
+      border: .125rem solid $color-primary-BrainFlix-Blue;
+    }
+  }
+
+  &__button-publish {
+    margin-bottom: 1rem;
+  }
+
+  &__button-cancel {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+
+  }
+
+}
+

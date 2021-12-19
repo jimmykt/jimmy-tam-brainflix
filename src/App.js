@@ -15,8 +15,11 @@ function App() {
       <Header />
       <Switch>
         <Route path="/" component={HomePage} exact />
-        <Route path="/:id" render={(routerProps) => (<HomePage {...routerProps} />)} />
+        <Route path="/video/:id" component={HomePage} />
+
+        {/* <Route path="/:id" render={(routerProps) => (<HomePage {...routerProps} />)} /> */}
         <Route path="/upload" component={UploadPage} />
+
       </Switch>
     </BrowserRouter>
   );

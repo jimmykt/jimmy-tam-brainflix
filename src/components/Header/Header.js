@@ -1,14 +1,11 @@
 import './Header.scss';
 import '../../styles/partials/_global.scss';
 import { Link } from 'react-router-dom';
-
 import LogoSVG from "../../assets/images/BrainFlix-logo.svg";
 import SearchSVG from "../../assets/images/Icons/search.svg";
 import UploadSVG from "../../assets/images/Icons/upload.svg";
-
 import Button from '../Button/Button';
 import Avatar from '../Avatar/Avatar';
-//<Link to="/"><img className="header__logo" src={logoPath} alt="brainflix logo" /></Link>
 
 function Header() {
   return (
@@ -21,7 +18,7 @@ function Header() {
       </form>
       <div className="header__avatar-container"><Avatar /></div>
 
-      <Link to="/upload"><Button icon={UploadSVG} text="UPLOAD"/></Link>
+      <Link to="/upload"><Button icon={UploadSVG} text="UPLOAD" /></Link>
     </div>
   </header>
   );
