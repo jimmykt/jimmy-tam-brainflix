@@ -5,7 +5,6 @@ import thumbnailImage from '../../assets/images/Upload-video-preview.jpg'
 import UploadSVG from "../../assets/images/Icons/upload.svg";
 
 function UploadPage() {
-
   let history = useHistory();
 
   const uploadClick = (event) => {

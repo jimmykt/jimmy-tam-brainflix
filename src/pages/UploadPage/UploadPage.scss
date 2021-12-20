@@ -18,9 +18,9 @@
     @include page-side-padding-desktop;
   }
 
-
   &__title {
     padding-top: 1rem;
+
     @include tablet {
       padding-bottom: 2rem;
       border-bottom: .0625rem solid $color-seondary-BrainFlix-Mercury;
@@ -44,6 +44,7 @@
     color: $color-primary-BrainFlix-Silver;
     padding-top: 2rem;
     padding-bottom: .4rem;
+
     @include tablet {
       @include reset-padding-margin;
     }
@@ -57,9 +58,11 @@
     width: 100%;
     border-radius: .25rem;
     padding-bottom: 1rem;
+
     @include tablet {
       width: 50%;
     }
+
     @include desktop {
       width: 100%;
     }
@@ -86,7 +89,6 @@
   &__input-description {
     background-color: $color-seondary-BrainFlix-Alabaster;
     border: .0625rem solid $color-primary-BrainFlix-Silver;
-
     font-family: 'Avenir';
     width: 100%;
     resize: none;
@@ -103,6 +105,7 @@
 
   &__button-publish {
     margin-bottom: 1rem;
+
     @include tablet {
       @include reset-padding-margin;
       margin-right: 1rem;
@@ -112,6 +115,7 @@
   &__button-cancel {
     margin-top: 2rem;
     margin-bottom: 2rem;
+
     @include tablet {
       @include reset-padding-margin;
     }
@@ -134,6 +138,5 @@
       flex-direction: row-reverse;
     }
   }
-  
 }
 

@@ -11,8 +11,8 @@ function App() {
       <Header />
       <Switch>
         <Route exact path="/" render={
-          (routerProps)=><HomePage {...routerProps} />
-        } />
+          (routerProps) => <HomePage {...routerProps} />
+        }/>
         <Route path="/video/:id" component={HomePage} />
         <Route path="/upload" component={UploadPage} />
 

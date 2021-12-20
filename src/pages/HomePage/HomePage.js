@@ -15,16 +15,22 @@ class HomePage extends Component {
   }
 
   componentDidMount() {
-    console.log(this.props.match)
-    // set main video to urlID when refresh page happens
     axios.get(API + "/videos" + API_KEY)
     .then((response) => {
       this.setState({
         videoData: response.data
       })
-
       if (this.props.match.url === "/" ) {
         axios.get(API + "/videos/" + this.state.videoData[0].id + API_KEY)
+        .then((response) => {
+          this.setState({
+            videoPlaying: response.data,
+          })
+        })
+      }
+      // keeps same video when you refresh
+      else {
+        axios.get(API + "/videos/" + this.props.match.params.id + API_KEY)
         .then((response) => {
           this.setState({
             videoPlaying: response.data,
@@ -34,13 +40,10 @@ class HomePage extends Component {
     })
   }
 
-
   // update state change
   componentDidUpdate(prevProps) {
     let id = this.props.match.params.id;
-    console.log("match:  " + this.props.match.params.id);
-    console.log("prev:  " + prevProps.match.params.id);
-
+    
     if(this.props.match.params.id !== prevProps.match.params.id) {
       if (this.props.match.url === "/" ) {
         axios.get(API + "/videos/" + this.state.videoData[0].id + API_KEY)

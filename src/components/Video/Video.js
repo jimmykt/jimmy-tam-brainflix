@@ -1,10 +1,11 @@
 import './Video.scss';
+import { API_KEY } from '../../util/util';
 
 const Video = ({video}) => {
   return (
   <section className="video">
     <video className="video__player" poster={video.image} 
-      src={video.video + "/?api_key=4354755b-7920-4743-83e9-cb45372f1579"}
+      src={video.video + API_KEY}
       controls>
     </video>
   </section>

@@ -13,7 +13,6 @@
     @include reset-padding-margin;
   }
   
-
   &__title {
     border-bottom: .0625rem solid $color-seondary-BrainFlix-Mercury;
     padding-top: 1.5rem;
@@ -25,7 +24,6 @@
       padding-bottom: 1.5rem;
     }
   }
-
 
   &__info-container {
     border-bottom: .0625rem solid $color-seondary-BrainFlix-Mercury;
@@ -39,7 +37,6 @@
     }
   }
 
-
   &__right-container {
     color: $color-primary-BrainFlix-Silver;
     margin-right: 2rem;
@@ -49,14 +46,12 @@
     }
   }
 
-
   &__left-container {
     @include tablet {
       display: flex;
       align-items: center;
     }
   }
-
 
   &__channel {
     padding-bottom: 1rem;
@@ -67,11 +62,9 @@
     }
   }
 
-
   &__date {
     color: $color-primary-BrainFlix-Silver;
   }
-
 
   &__views {
     padding-bottom: 1rem;
@@ -80,7 +73,6 @@
       margin-right: 2.5rem;
     }
   }
-
 
   &__description {
     padding-top: 1rem;

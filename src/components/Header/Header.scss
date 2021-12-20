@@ -19,7 +19,6 @@
     @include page-side-padding-desktop;
   }
 
-
   &__content {
     width: 100%;
 
@@ -34,7 +33,6 @@
     }
   }
 
-
   &__logo {
     margin: 1rem 0rem;
     max-width: 7.5rem;
@@ -44,7 +42,6 @@
       @include reset-padding-margin;
     }
   }
-
 
   &__form {
     width: 100%;
@@ -63,13 +60,11 @@
     }
   }
 
-
   &__search-icon {
     position: absolute;
     padding-left: .5rem;
     margin-top: .5rem;
   }
-
 
   &__search-imput {
     background-color: $color-seondary-BrainFlix-Alabaster;
@@ -89,13 +84,11 @@
     }
   }
 
-
   &__button {
     @include tablet {
       width: 100%;
     }
   }
-
 
   &__avatar-container {
     position: absolute;
