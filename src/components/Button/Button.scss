@@ -32,6 +32,7 @@
   }
 }
 
+
 .cancel-button {
   background-color: $color-primary-BrainFlix-White;
   color: $color-primary-BrainFlix-Blue;
@@ -43,6 +44,7 @@
   align-items: center;
   justify-content: center;
   position: relative;
+
   @include tablet {
     width: 9.375rem;
   } 

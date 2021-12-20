@@ -17,7 +17,6 @@ function Header() {
         <input className="header__search-imput" type="text" name="name" placeholder="Search"></input>
       </form>
       <div className="header__avatar-container"><Avatar /></div>
-
       <Link to="/upload" className='link'><Button icon={UploadSVG} text="UPLOAD" /></Link>
     </div>
   </header>

@@ -15,20 +15,22 @@ class HomePage extends Component {
   }
 
   componentDidMount() {
-    //Get Default Video
-    axios.get(API + "/videos/84e96018-4022-434e-80bf-000ce4cd12b8" + API_KEY)
-    .then((response) => {
-      this.setState({
-        videoPlaying: response.data,
-      })
-    })
-
-    //set videoData state that doesnt include that video currently being played
+    console.log(this.props.match)
+    // set main video to urlID when refresh page happens
     axios.get(API + "/videos" + API_KEY)
     .then((response) => {
       this.setState({
         videoData: response.data
       })
+
+      if (this.props.match.url === "/" ) {
+        axios.get(API + "/videos/" + this.state.videoData[0].id + API_KEY)
+        .then((response) => {
+          this.setState({
+            videoPlaying: response.data,
+          })
+        })
+      }
     })
   }
 
@@ -36,14 +38,26 @@ class HomePage extends Component {
   // update state change
   componentDidUpdate(prevProps) {
     let id = this.props.match.params.id;
+    console.log("match:  " + this.props.match.params.id);
+    console.log("prev:  " + prevProps.match.params.id);
+
     if(this.props.match.params.id !== prevProps.match.params.id) {
-      axios.get(API + "/videos/" + id + API_KEY)
-      .then((response) => {
-        console.log(response.data)
-        this.setState({
-          videoPlaying: response.data,
+      if (this.props.match.url === "/" ) {
+        axios.get(API + "/videos/" + this.state.videoData[0].id + API_KEY)
+        .then((response) => {
+          this.setState({
+            videoPlaying: response.data,
+          })
         })
-      })
+      }
+      else {
+        axios.get(API + "/videos/" + id + API_KEY)
+        .then((response) => {
+          this.setState({
+            videoPlaying: response.data,
+          })
+        })
+      }
     }
   }
 

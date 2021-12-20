@@ -5,10 +5,12 @@
 .comments-input {
   @include page-side-padding-mobile;
   margin-bottom: 1rem;
+
   @include tablet {
     margin-top: 1rem;
     @include page-side-padding-tablet;
   }
+
   @include desktop {
     @include reset-padding-margin;
     margin-right: 1rem;
@@ -16,6 +18,7 @@
 
   &__length {
     font-family: "Avenir-bold";
+
     @include tablet {
       margin-bottom: 1.5rem;
     }
@@ -23,6 +26,7 @@
 
   &__container {
     display: flex;
+
     @include tablet {
       align-items: center;
     }
@@ -30,6 +34,7 @@
 
   &__avatar {
     margin-top: 2.7rem;
+
     @include tablet {
       margin-top: 0rem;
       margin-right: 1rem;
@@ -39,6 +44,7 @@
   &__label {
     color: $color-primary-BrainFlix-Silver;
     font-size: .95rem;
+
     @include tablet {
       position: absolute;
     }
@@ -54,6 +60,7 @@
     padding: .5rem;
     height: 5rem;
     border-radius: 4px;
+
     &:focus { 
       border: .125rem solid $color-primary-BrainFlix-Blue;
     }
@@ -66,6 +73,7 @@
       margin-bottom: 1rem;
       margin-top: 1.5rem;
     }
+
     @include desktop {
       margin-bottom: 2rem;
     }
@@ -75,6 +83,7 @@
     width: 90%;
     padding-left: 1rem;
     margin-top: 1.5rem;
+    
     @include tablet {
       @include reset-padding-margin;
       display: flex;

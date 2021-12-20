@@ -6,9 +6,11 @@
   display: flex;
   width: 100%;
   padding-bottom: 1rem;
+
   @include tablet {
     width: 50%;
   }
+  
   @include desktop {
     width: 100%;
   }

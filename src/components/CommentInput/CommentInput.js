@@ -9,9 +9,7 @@ const CommentInput = (props) => {
   if(props.video.comments) {
     commentsArrayLength = props.video.comments.length;
   }
-  //console.log(commentsArrayLength)
-
-
+  
   return (
   <section className="comments-input">
     <h3 className="comments-input__length">{commentsArrayLength} Comments</h3>

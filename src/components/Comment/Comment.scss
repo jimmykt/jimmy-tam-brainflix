@@ -7,6 +7,7 @@
   padding-bottom: 1rem;
   border-top: 1px solid $color-seondary-BrainFlix-Mercury;
   display: flex;
+
   @include desktop {
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
@@ -15,6 +16,7 @@
   &__container {
     margin-left: 1rem;
     width: 85%;
+    
     @include desktop {
       width: 88%;
     }
