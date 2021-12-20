@@ -24,7 +24,7 @@ function UploadPage() {
     <h1 className='upload__title'>Upload Video</h1>
     <div className='upload__container'>
       <div className='upload__thumbnail'>
-        <h2 className="upload__thumbnail-title">VIDEO THUMBNAIL</h2>
+        <p className="upload__thumbnail-title">VIDEO THUMBNAIL</p>
         <img className="upload__thumbnail-image" src={thumbnailImage} alt='bike ride'></img>
       </div>
       <form className='upload__form'>

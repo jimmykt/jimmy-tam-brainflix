@@ -30,7 +30,7 @@
   &__thumbnail {
     @include desktop {
       width: 27%;
-      padding-right: 1rem;
+      padding-right: 2rem;
     }
   }
 
@@ -47,10 +47,12 @@
 
     @include tablet {
       @include reset-padding-margin;
+      margin-top: 2rem;
     }
     @include desktop {
       font-size: 1rem;
       display: block;
+      margin-top: 0rem;
     }
   }
 
@@ -61,10 +63,14 @@
 
     @include tablet {
       width: 50%;
+      padding-top: .5rem;
     }
 
     @include desktop {
       width: 100%;
+      padding-bottom: 0rem;
+      padding-top: 0rem;
+
     }
   }
 
@@ -108,7 +114,7 @@
 
     @include tablet {
       @include reset-padding-margin;
-      margin-right: 1rem;
+      margin-left: 1rem;
     }
   }
 
