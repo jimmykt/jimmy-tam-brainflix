@@ -25,8 +25,25 @@ const getComments = (id) => {
   return comments;
 }
 
+const createOne = ({ title, description }) => {
+  const videosData = readTrees();
+
+  const newVideo = {
+      id: uniqid(),
+      title,
+      description,
+  }
+
+  treesData.push(newVideo);
+
+  writeTrees(videosData);
+
+  return newVideo;
+};
+
 module.exports = {
   getAll,
   getById,
   getComments,
+  createOne,
 }
