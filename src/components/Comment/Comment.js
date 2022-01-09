@@ -5,7 +5,7 @@ const Comment = (props) => {
   const comment = props.comment;
   return (
       <article className="comment">
-        <div className="avatarDefault"></div>
+        <div className="comment__avatarDefault"></div>
         <div className="comment__container">
           <div className="comment__info-container">
             <p className="comment__name">{comment.name}</p>

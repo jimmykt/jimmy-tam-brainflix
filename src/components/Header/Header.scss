@@ -90,11 +90,10 @@
     }
   }
 
-  &__avatar-container {
+  &__avatar {
     position: absolute;
     right: 1rem;
     top: 3.7rem;
-
     @include tablet {
       top: 1rem;
       right: 2.25rem;

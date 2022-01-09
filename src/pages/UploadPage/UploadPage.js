@@ -39,8 +39,8 @@ function UploadPage() {
       </form>
     </div>
     <div className="upload__buttons">
-      <div className="upload__button-publish" ><Button icon={UploadSVG} text="PUBLISH" function={uploadClick} /></div>
-      <div className="upload__button-cancel"><CancelButton text="CANCEL" function={cancelClick} /></div>
+      <Button className="upload__button-publish" icon={UploadSVG} text="PUBLISH" function={uploadClick} />
+      <CancelButton className="upload__button-cancel" text="CANCEL" function={cancelClick} />
     </div>
     </main>
   )

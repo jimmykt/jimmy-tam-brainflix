@@ -16,7 +16,7 @@ function Header() {
         <img className="header__search-icon" src={SearchSVG} alt="search"></img>
         <input className="header__search-imput" type="text" name="name" placeholder="Search"></input>
       </form>
-      <div className="header__avatar-container"><Avatar /></div>
+      <div className="header__avatar"><Avatar /></div>
       <Link to="/upload" className='link'><Button icon={UploadSVG} text="UPLOAD" /></Link>
     </div>
   </header>

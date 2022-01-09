@@ -18,7 +18,7 @@ const VideoDescription = ({video}) => {
         <img className="video-details__svg" src={ViewsSVG} alt="views"></img>  {video.views}
         </p>
         <p className="video-details__likes">
-        <img className="test" src={likesSVG} alt="likes"></img> {video.likes}</p>
+        <img src={likesSVG} alt="likes"></img> {video.likes}</p>
       </div>
     </div>
     <p className="video-details__description">{video.description}</p>
