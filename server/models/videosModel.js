@@ -9,6 +9,10 @@ function readData() {
   return videosData;
 }
 
+function writeData(data) {
+  fs.writeFileSync(dataPath, JSON.stringify(data));
+}
+
 const getAll = () => {
   return readData();
 };
@@ -25,8 +29,9 @@ const getComments = (id) => {
   return comments;
 }
 
+// Create new Video
 const createOne = ({ title, description }) => {
-  const videosData = readTrees();
+  const videoData = readData();
 
   const newVideo = {
       id: uniqid(),
@@ -34,10 +39,8 @@ const createOne = ({ title, description }) => {
       description,
   }
 
-  treesData.push(newVideo);
-
-  writeTrees(videosData);
-
+  videoData.push(newVideo);
+  writeData(videoData);
   return newVideo;
 };
 

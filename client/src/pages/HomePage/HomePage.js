@@ -25,7 +25,6 @@ class HomePage extends Component {
         //axios.get(API + "/videos/" + this.state.videoData[0].id + API_KEY)
         axios.get(process.env.REACT_APP_API_URL + "/videos/" + this.state.videoData[0].id)
         .then((response) => {
-          console.log(response)
           this.setState({
             videoPlaying: response.data,
           })

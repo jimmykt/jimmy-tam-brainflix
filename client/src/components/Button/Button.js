@@ -2,7 +2,7 @@ import './Button.scss';
 
 export function Button(props) {
   return (
-  <button className="button" onClick={props.function}>
+  <button className="button" type="submit" onSubmit={props.function}>
     <img className="button__icon" src={props.icon} alt="icon"/>
     <p className="button__text">{props.text}</p>
   </button>

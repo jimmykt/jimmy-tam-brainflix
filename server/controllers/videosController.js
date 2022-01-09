@@ -5,7 +5,7 @@ const getAll = (req, res) => {
   strippedData = videosData.map((video) => {
     const newVideo = {}
     newVideo.id = video.id;
-    newVideo.newTitle = video.title
+    newVideo.title = video.title
     newVideo.channel = video.channel
     //newVideo.image = video.channel
 
@@ -32,8 +32,26 @@ const getComments = (req, res) => {
   res.json(foundComments)
 }
 
+const createOne = (req, res) => {
+  if (!req.body.title) {
+      return res.status(400).send("Title is required!");
+  }
+
+  if (!req.body.description) {
+      return res.status(400).send("Description is reqiured!");
+  }
+
+  const newVideo = videosModel.createOne({
+      title: req.body.title,
+      description: req.body.description
+  });
+
+  res.status(201).json(newVideo);
+};
+
 module.exports = {
   getAll,
   getOne,
   getComments,
+  createOne,
 };
