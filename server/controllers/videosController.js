@@ -7,9 +7,10 @@ const getAll = (req, res) => {
     newVideo.id = video.id;
     newVideo.title = video.title
     newVideo.channel = video.channel
-    newVideo.image = "http://localhost:" + process.env.PORT + "/images/image" + i + ".jpeg"
+    newVideo.image = video.image
     return newVideo
   })
+  
   res.json(strippedData);
 }
 

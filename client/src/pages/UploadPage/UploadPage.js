@@ -23,7 +23,7 @@ function UploadPage() {
     axios.post(process.env.REACT_APP_API_URL + '/videos', {
       title: event.target.title.value,
       description: event.target.description.value,
-      image: ("http://localhost:" + process.env.PORT + "Upload-video-preview.jpg")
+      image: (process.env.REACT_APP_API_URL + "/images/Upload-video-preview.jpg")
     })
     .then(
       alert("You video has been uploaded!")

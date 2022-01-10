@@ -1,8 +1,8 @@
 import './Avatar.scss';
 
-function Avatar() {
+function Avatar(props) {
   return (
-  <div className="avatar"></div>
+  <div className={`avatar ${props.className}`}></div>
   );
 }
 

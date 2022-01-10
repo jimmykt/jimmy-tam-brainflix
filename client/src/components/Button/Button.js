@@ -1,15 +1,15 @@
 import './Button.scss';
 
 export function Button(props) {
+  console.log(props);
   return (
-  <button className="button" type="submit" onSubmit={props.function}>
+  <button className={`button ${props.className}`} type="submit" onSubmit={props.function}>
     <img className="button__icon" src={props.icon} alt="icon"/>
     <p className="button__text">{props.text}</p>
   </button>
   )
 }
 export default Button;
-
 
 export function CancelButton(props) {
   return (
