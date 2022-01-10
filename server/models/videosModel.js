@@ -18,25 +18,30 @@ const getAll = () => {
 };
 
 const getById = (id) => {
-  const videosData = readData();
-  return videosData.find((video) => id === video.id);
+  const videosData = readData()
+  const foundVideo = videosData.find((video) => id === video.id)
+  const foundIndex = videosData.findIndex((video) => id === video.id)
+  foundVideo.image = "http://localhost:" + process.env.PORT + "/images/image" + foundIndex + ".jpeg"
+  return foundVideo;
 };
 
 const getComments = (id) => {
   const videosData = getById(id);
   const comments = videosData.comments;
-  console.log(comments);
   return comments;
 }
 
+
+
 // Create new Video
-const createOne = ({ title, description }) => {
+const createOne = ({ title, description, image }) => {
   const videoData = readData();
 
   const newVideo = {
       id: uniqid(),
       title,
       description,
+      image,
   }
 
   videoData.push(newVideo);

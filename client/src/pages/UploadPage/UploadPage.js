@@ -14,23 +14,21 @@ function UploadPage() {
     history.push('/')
   }
 
-
   const handleSubmit = (event) => {
     event.preventDefault();
     console.log(event);
     console.log(event.target.title.value);
     console.log(event.target.description.value);
 
-    
     axios.post(process.env.REACT_APP_API_URL + '/videos', {
       title: event.target.title.value,
-      description: event.target.description.value
+      description: event.target.description.value,
+      image: ("http://localhost:" + process.env.PORT + "Upload-video-preview.jpg")
     })
     .then(
       alert("You video has been uploaded!")
     );
-    
-   //history.push('/')
+   history.push('/')
   }
 
   return (

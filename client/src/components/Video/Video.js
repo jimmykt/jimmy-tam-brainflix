@@ -1,5 +1,4 @@
 import './Video.scss';
-//import { API_KEY } from '../../util/util';
 
 const Video = ({video}) => {
   return (

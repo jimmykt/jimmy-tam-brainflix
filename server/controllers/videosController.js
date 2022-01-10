@@ -2,13 +2,12 @@ const videosModel = require('../models/videosModel');
 
 const getAll = (req, res) => {
   const videosData = videosModel.getAll();
-  strippedData = videosData.map((video) => {
+  const strippedData = videosData.map((video, i) => {
     const newVideo = {}
     newVideo.id = video.id;
     newVideo.title = video.title
     newVideo.channel = video.channel
-    //newVideo.image = video.channel
-
+    newVideo.image = "http://localhost:" + process.env.PORT + "/images/image" + i + ".jpeg"
     return newVideo
   })
   res.json(strippedData);
@@ -43,7 +42,9 @@ const createOne = (req, res) => {
 
   const newVideo = videosModel.createOne({
       title: req.body.title,
-      description: req.body.description
+      description: req.body.description,
+      image: req.body.image
+
   });
 
   res.status(201).json(newVideo);
