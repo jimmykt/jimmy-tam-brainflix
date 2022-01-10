@@ -1,7 +1,6 @@
 import './Button.scss';
 
 export function Button(props) {
-  console.log(props);
   return (
   <button className={`button ${props.className}`} type="submit" onSubmit={props.function}>
     <img className="button__icon" src={props.icon} alt="icon"/>

@@ -10,7 +10,7 @@ const getAll = (req, res) => {
     newVideo.image = video.image
     return newVideo
   })
-  
+
   res.json(strippedData);
 }
 
@@ -31,6 +31,8 @@ const getComments = (req, res) => {
   }
   res.json(foundComments)
 }
+//    "image": "http://localhost:8000/images/image2.jpeg",
+
 
 const createOne = (req, res) => {
   if (!req.body.title) {
@@ -41,11 +43,15 @@ const createOne = (req, res) => {
       return res.status(400).send("Description is reqiured!");
   }
 
+
+  const date = new Date();
+
   const newVideo = videosModel.createOne({
       title: req.body.title,
       description: req.body.description,
-      image: req.body.image
-
+      image: req.body.image,
+      channel: "New User",
+      timestamp: new Date(),
   });
 
   res.status(201).json(newVideo);
