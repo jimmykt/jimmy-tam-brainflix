@@ -20,8 +20,6 @@ const getAll = () => {
 const getById = (id) => {
   const videosData = readData()
   const foundVideo = videosData.find((video) => id === video.id)
-  const foundIndex = videosData.findIndex((video) => id === video.id)
-  foundVideo.image = "http://localhost:" + process.env.PORT + "/images/image" + foundIndex + ".jpeg"
   return foundVideo;
 };
 

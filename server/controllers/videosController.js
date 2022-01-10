@@ -31,8 +31,6 @@ const getComments = (req, res) => {
   }
   res.json(foundComments)
 }
-//    "image": "http://localhost:8000/images/image2.jpeg",
-
 
 const createOne = (req, res) => {
   if (!req.body.title) {
@@ -42,7 +40,6 @@ const createOne = (req, res) => {
   if (!req.body.description) {
       return res.status(400).send("Description is reqiured!");
   }
-
 
   const date = new Date();
 

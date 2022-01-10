@@ -6,7 +6,6 @@ import VideoDescription from '../../components/VideoDescription/VideoDescription
 import CommentInput from '../../components/CommentInput/CommentInput';
 import CommentList from '../../components/CommentList/CommentList';
 import VideoList from '../../components/VideoList/VideoList';
-//import { API, API_KEY } from '../../util/util';
 
 class HomePage extends Component {
   state = {
@@ -15,25 +14,26 @@ class HomePage extends Component {
   }
 
   componentDidMount() {
-    //axios.get(API + "/videos" + API_KEY)
-    axios.get(process.env.REACT_APP_API_URL + "/videos")
+    axios
+    .get(process.env.REACT_APP_API_URL + "/videos")
     .then((response) => {
       this.setState({
         videoData: response.data
       })
       if (this.props.match.url === "/" ) {
-        //axios.get(API + "/videos/" + this.state.videoData[0].id + API_KEY)
-        axios.get(process.env.REACT_APP_API_URL + "/videos/" + this.state.videoData[0].id)
+        axios
+        .get(process.env.REACT_APP_API_URL + "/videos/" + this.state.videoData[0].id)
         .then((response) => {
           this.setState({
             videoPlaying: response.data,
           })
         })
       }
+
       // keeps same video when you refresh
       else {
-        //axios.get(API + "/videos/" + this.props.match.params.id + API_KEY)
-        axios.get(process.env.REACT_APP_API_URL + "/videos/" + this.props.match.params.id)
+        axios
+        .get(process.env.REACT_APP_API_URL + "/videos/" + this.props.match.params.id)
         .then((response) => {
           this.setState({
             videoPlaying: response.data,
@@ -49,17 +49,18 @@ class HomePage extends Component {
     
     if(this.props.match.params.id !== prevProps.match.params.id) {
       if (this.props.match.url === "/" ) {
-        //axios.get(API + "/videos/" + this.state.videoData[0].id + API_KEY)
-        axios.get(process.env.REACT_APP_API_URL + "/videos/" + this.state.videoData[0].id)
+        axios
+        .get(process.env.REACT_APP_API_URL + "/videos/" + this.state.videoData[0].id)
         .then((response) => {
           this.setState({
             videoPlaying: response.data,
           })
         })
       }
+
       else {
-        //axios.get(API + "/videos/" + id + API_KEY)
-        axios.get(process.env.REACT_APP_API_URL + "/videos/" + id)
+        axios
+        .get(process.env.REACT_APP_API_URL + "/videos/" + id)
         .then((response) => {
           this.setState({
             videoPlaying: response.data,
