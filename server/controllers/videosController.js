@@ -49,6 +49,9 @@ const createOne = (req, res) => {
       image: req.body.image,
       channel: "New User",
       timestamp: new Date(),
+      views: 0,
+      likes: 0,
+      comments: []
   });
 
   res.status(201).json(newVideo);

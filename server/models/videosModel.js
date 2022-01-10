@@ -32,7 +32,17 @@ const getComments = (id) => {
 
 
 // Create new Video
-const createOne = ({ title, description, image, channel, timestamp }) => {
+const createOne = ({ 
+  title, 
+  description, 
+  image, 
+  channel, 
+  timestamp,
+  likes, 
+  views,
+  comments,
+
+}) => {
   const videoData = readData();
 
   const newVideo = {
@@ -42,6 +52,9 @@ const createOne = ({ title, description, image, channel, timestamp }) => {
       image,
       channel,
       timestamp,
+      views,
+      likes,
+      comments,
   }
 
   videoData.push(newVideo);
